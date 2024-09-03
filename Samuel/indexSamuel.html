@@ -1,11 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Samuel </title>
+    <link rel="stylesheet" href="IndexSamuel.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
+    <div class="countainer">
+        <nav>
+            <ul>
+                <li>
+                    <i class='bx bxs-user'></i>
+                    <a href="index.html"> Sobre Mim </a>
+                     
+                </li>
+                
+                <li> 
+                    <i class='bx bxl-github' ></i>
+                    <a href="https://github.com/CodingWithSamuel">
+                        Projetos
+                    </a>
+               
+                </li>
+                
+                <li>
+                    <i class='bx bxs-contact'></i>
+                     <a href="Contact.html"> Contato </a>
+                    </li>
+                <li id="login-item">
+                    <a href="login/Login.html"> É um Colaborador? </a>
+                    <i class='bx bx-log-in' ></i>
+                
+                </li>
     
+                <!-- Container para a imagem de perfil -->
+                <li id="profile-pic-container" style="display: none;">
+                    <div class="profile-menu">
+                        <img id="profile-pic" src="" alt="Profile Picture" style="border-radius: 50%; width: 40px; height: 40px;">
+                        <div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div> <!-- Ícone de lista -->
+                        <ul class="menu" id="adminMenu">
+                            <li><a href="########"> Aprovar Usuários </a></li>
+                            <li><a href="########"> Configurações </a></li>
+                        </ul>
+                        <div id="userApprovalMenu" class="dropdown-menu" style="display: none;">
+                        </div>
+
+                        <!-- MENUU para aprovação de usuários -->
+<div id="aprovarUsuarioModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <h2> Aprovar Usuário </h2>
+        <p> Aqui você pode aprovar ou rejeitar usuários.</p>
+        <!-- TERMINAR AQUI! FAZER APROVAÇÃO FUNCIONAR!!! -->
+    </div>
+</div>
+
+
+                        <button id="logout-btn" class="btn-logout">Sair</button>
+                    
+                </li>              
+            </ul>
+        </nav>
+        
+        <header> 
+            <div class="center"> 
+                <img src="./img/PANA1915.jpg" alt="">
+            </div>
+            <h1> Samuel Oliveira </h1>
+            <h2> Estagiario de T.I - HTML + CSS </h2>
+     </header>
+     <main>
+        <section>
+            <h3> Sobre Mim </h3>
+            <p class="texto-junto">
+                Olá! Meu nome é Samuel Oliveira, tenho 18 anos e sou um entusiasta da tecnologia em constante aprendizado. 
+                Atualmente, estou cursando o 2º semestre de Ciências da Computação, onde estou aprofundando meus conhecimentos em diversas áreas da TI. 
+                <br><br>
+                Tenho experiência prática com HTML, CSS e banco de dados, e estou sempre buscando novas oportunidades para aplicar e expandir esses conhecimentos. 
+                Meu objetivo é encontrar uma posição na área de tecnologia, onde eu possa contribuir com minha paixão e vontade de aprender.
+                <br> <br>
+                Estou empolgado para crescer na área e fazer parte de uma equipe que valorize inovação e colaboração. 
+                Se você está procurando alguém que é curioso, dedicado e sempre disposto a enfrentar novos desafios, eu sou a pessoa certa!
+                <br> <br>
+                </p>
+        </section>
+        
+        <section>
+            <h3> Projetos </h3>
+            <p>
+            Site Portifólio - HTML + CSS + BANCO DE DADOS
+            </p>
+        </section>
+    
+        <section>
+            <h3>Cursos</h3>
+            <div class="curso-container">
+                <p>Ciencias da Computação - 2º Semestre <br> (Em Andamento)</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar1"></div>
+                    <span id="progressPercent1"> 0% </span>
+                </div>
+            </div>
+            <div class="curso-container">
+                <p><span style="color: rgb(0, 0, 0);"> Gestão de Projetos - Faculdade Anhanguera (Concluido) </span></p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar2"></div>
+                    <span id="progressPercent2">100%</span>
+                </div>
+            </div>
+        </section>
+    
+     </main>
+        <footer> 
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/samuel-oliveira-08b048262/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                <a href="https://instagram.com/samukzz_" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i> Instagram</a>
+                <a href="https://github.com/CodingWithSamuel?tab=projects" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i> GitHub</a>
+            </div>
+        </footer>
+    <script src="index.js"></script>
 </body>
 </html>
