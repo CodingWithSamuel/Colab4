@@ -46,6 +46,29 @@ body {
     margin-top: 10px;
     font-size: 1.2rem;
 }
+
+.botao-voltar {
+  margin-top: 20px;
+}
+
+.botao-voltar a {
+  background-color: #35096e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.botao-voltar a:hover {
+  background-color: #000000;
+}
+
 /*BOTÃO DE TROCAR TEMA*/
 body {
     transition: background-color 0.3s ease-in-out;
