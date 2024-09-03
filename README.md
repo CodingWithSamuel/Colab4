@@ -3,14 +3,3 @@ Estamos desenvolvendo um site de portfólio colaborativo que permite a criação
  
  Alterado No VS CODE
 
- DEU PORRAAAAAA2
-
-
- PT GGG
-
- MEU PCZINHO NÃO DEU ESSES B.O!!!!!!!!!!!!!
- e o corinthians vai ou nao vai?
- Não vai
- CLARO QUE VAI SEU MERDA
- bora timaoooo ANTAAAAAAAAAAAAA
- 
