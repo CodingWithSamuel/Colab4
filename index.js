@@ -29,4 +29,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  //BOTÃO DE TROCAR TEMA
+  // Seleciona o botão de troca de tema e o body do documento
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Função para trocar o tema
+function toggleTheme() {
+  // Verifica o tema atual 
+  if (body.classList.contains('light')) {
+    // Troca para o tema escuro
+    body.classList.remove('light');
+    body.classList.add('dark');
+    themeToggle.textContent = 'Tema claro';
+  } else {
+    // Troca para o tema claro
+    body.classList.remove('dark');
+    body.classList.add('light');
+    themeToggle.textContent = 'Tema escuro';
+  }
+}
+
+
+themeToggle.addEventListener('click', toggleTheme);
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  // Troca para o tema escuro
+  body.classList.add('dark');
+  themeToggle.textContent = 'Tema claro';
+} else {
+  // Troca para o tema claro
+  body.classList.add('light');
+  themeToggle.textContent = 'Tema escuro';
+}
   

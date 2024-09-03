@@ -46,3 +46,33 @@ body {
     margin-top: 10px;
     font-size: 1.2rem;
 }
+/*BOTÃO DE TROCAR TEMA*/
+body {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  body.light {
+    background-color: #f0f0f0;
+  }
+  
+  body.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Estilos para o botão de troca de tema */
+  .theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f8cc07;
+    color: #070000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #444;
+  }
