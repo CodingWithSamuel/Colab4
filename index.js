@@ -42,12 +42,12 @@ function toggleTheme() {
     // Troca para o tema escuro
     body.classList.remove('light');
     body.classList.add('dark');
-    themeToggle.textContent = 'Tema claro';
+    themeToggle.textContent = '𖤓';
   } else {
     // Troca para o tema claro
     body.classList.remove('dark');
     body.classList.add('light');
-    themeToggle.textContent = 'Tema escuro';
+    themeToggle.textContent = '☾';
   }
 }
 
@@ -57,10 +57,10 @@ themeToggle.addEventListener('click', toggleTheme);
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   // Troca para o tema escuro
   body.classList.add('dark');
-  themeToggle.textContent = 'Tema claro';
+  themeToggle.textContent = '𖤓';
 } else {
   // Troca para o tema claro
   body.classList.add('light');
-  themeToggle.textContent = 'Tema escuro';
+  themeToggle.textContent = '☾';
 }
   
