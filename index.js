@@ -13,7 +13,4 @@ const profiles = document.querySelectorAll('.profile img');
                 profile.style.transform = 'scale(1.2) rotate(360deg)';
             });
         });
-
-
-
-/* JS SCRIPT FAZENDO A ANIMAÇÃO DE ROTAÇÂO EM CADA IMAGEM*/
+        
