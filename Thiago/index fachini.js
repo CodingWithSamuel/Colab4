@@ -34,7 +34,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
       const logoutButton = document.getElementById("logout-btn");
       logoutButton.addEventListener("click", function() {
           localStorage.clear();
-          window.location.href = "index fachini.html";
+          window.location.href = "indexThiago.html";
       });
 
 
