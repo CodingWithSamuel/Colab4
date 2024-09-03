@@ -10,4 +10,4 @@ Estamos desenvolvendo um site de portfólio colaborativo que permite a criação
 
  MEU PCZINHO NÃO DEU ESSES B.O!!!!!!!!!!!!!
  e o corinthians vai ou nao vai?
- 
+ Não vai
