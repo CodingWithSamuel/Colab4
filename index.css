@@ -71,8 +71,8 @@ body.dark {
   align-items: center;
   gap: 10px;
   position: absolute;
-  top: 20px;
-  left: 10px;
+  top: 15px;
+  right: 80px;
 }
 
 .botao-voltar a:hover {
