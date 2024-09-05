@@ -1,11 +1,20 @@
-function toggleMenu() {
-    const menu = document.getElementById('adminMenu');
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
     }
-}
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
+});
 
 function updateProgressBar(progressBarId, progressPercentId, percent) {
     const progressBar = document.getElementById(progressBarId);
