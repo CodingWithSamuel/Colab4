@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         link.rel = 'stylesheet';
                         link.href = `${profileId}/Index${profileId}.css`; // Caminho do CSS
                         document.head.appendChild(link);
+                        // Adiciona o Js do perfil
+                        
 
                         // Exibe o botão de voltar
                         botaoVoltar.classList.remove('hidden');
