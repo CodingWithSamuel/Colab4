@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -80,7 +80,7 @@ body.dark {
 }
 
 /* Transição para o ícone no canto superior esquerdo */
-.move-to-corner {
+/*.move-to-corner {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -91,22 +91,22 @@ body.dark {
 }
 
 /* Adicionar essa classe ao seu CSS existente */
-.move-to-corner {
+/*.move-to-corner {
   position: relative; /* Garante que a imagem não desapareça */
-  width: 80px; /* Redimensiona a imagem para um tamanho menor */
-  height: 80px;
+  /*width: 80px; /* Redimensiona a imagem para um tamanho menor */
+  /*height: 80px;
   border-radius: 50%; /* Torna a imagem redonda */
-  transition: all 0.5s ease; /* Suaviza a transição */
-}
+  /*transition: all 0.5s ease; /* Suaviza a transição */
+
 
 
 /* Esconder o conteúdo por padrão */
-.hidden {
+/*.hidden {
   display: none;
 }
 
 /* Estilos para o botão de troca de tema */
-.theme-toggle {
+/*.theme-toggle {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -120,4 +120,105 @@ body.dark {
 
 .theme-toggle:hover {
   background-color: #050505;
+} */
+     
+      /* teste de codigo novo*/
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* perfis na horizontal */
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 40px; /* espaço entre os perfis */
+}
+
+.profile {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.selectedProfile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+#profileDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* espaço e visibiliadade */
+    z-index: 1; 
+}
+
+#selectedImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: transform 0.5s;
+}
+
+#backButton, #themeToggleButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 2; 
+}
+
+#themeToggleButton {
+    top: 60px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .button {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .button:hover {
+    background-color: #555;
 }

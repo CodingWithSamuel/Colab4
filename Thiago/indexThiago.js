@@ -10,17 +10,9 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
       profilePic.src = loggedInUser.profilePic;
       profilePicContainer.style.display = "block";
 
-      if (loggedInUser.username === "admin2") {
-          adminMenu.innerHTML = `
-              <li><a href="#" onclick="aprovarUsuarios()">Aprovar Usuários</a></li>
-              <li><a href="#">Configurações</a></li>
-          `;
-      } else {
-          adminMenu.innerHTML = `
-              <li><a href="#">Conta</a></li>
-          `;
+        
       }
-  }
+  
 
   function toggleMenu() {
       const menu = document.getElementById("adminMenu");

@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const profiles = document.querySelectorAll('.profile');
     const contentDiv = document.getElementById('content');
-    const botaoVoltar = document.querySelector('.botao-voltar');
+    const botaoVoltar = document.querySelector('.botao-voltar');//
 
     profiles.forEach(profile => {
         profile.addEventListener('click', () => {
@@ -76,4 +76,61 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('light');
         themeToggle.textContent = '☾';
     }
-});
+});*/
+ 
+              // teste de codigo novo//
+
+function selectProfile(profileElement) {
+    const menu = document.getElementById('menu');
+    const selectedProfile = document.getElementById('selectedProfile');
+    const profileDetails = document.getElementById('profileDetails');
+    const selectedImage = document.getElementById('selectedImage');
+    const profileName = document.getElementById('profileName');
+
+    // esconde menu
+    menu.style.display = 'none';
+
+    // mostra perfil selecionado
+    selectedProfile.style.display = 'flex';
+    profileDetails.style.display = 'flex';
+
+    // set da imagem e perfil selecionado
+    selectedImage.src = profileElement.getAttribute('data-img');
+    profileName.textContent = profileElement.getAttribute('data-name');
+
+    // escala a imagem do perfil
+    selectedImage.style.transform = 'scale(0.5)';
+}
+
+function goBack() {
+    const menu = document.getElementById('menu');
+    const selectedProfile = document.getElementById('selectedProfile');
+    const selectedImage = document.getElementById('selectedImage');
+
+    // mostra menu e esconde perfil
+    menu.style.display = 'flex';
+    selectedProfile.style.display = 'none';
+
+    // reseta o image scaling
+    selectedImage.style.transform = 'scale(1)';
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const themeButton = document.getElementById('themeToggleButton');
+    themeButton.textContent = document.body.classList.contains('dark-mode') ? '☀' : '☾';
+}
+//Carrega o HTML do perfil
+fetch(`${profileId}/index${profileId}.html`)
+    .then(response => response.text())
+    .then(html => {
+        document.querySelector('.container').classList.add('hidden');
+        contentDiv.innerHTML = html;
+        contentDiv.classList.remove('hidden');
+
+        // Adiciona o CSS do perfil
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = `${profileId}/Index${profileId}.css`; // Caminho do CSS
+        document.head.appendChild(link);
+    })
