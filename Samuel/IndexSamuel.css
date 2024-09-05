@@ -128,22 +128,38 @@ section p1 {
     background-color: #e0e0e0;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
 }
 
 .progress-bar {
     height: 30px;
-    background-color: #1fcf25;
+    background: linear-gradient(135deg, #069c0b 0%, #00b0ff 100%);
     text-align: center;
     line-height: 30px;
     color: white;
-    border-radius: 25px 0 0 25px;
-    transition: width 0.4s ease;
+    border-radius: 25px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: progress-bar-animation 3s ease-in-out;
+    position: absolute; /* Para garantir que ocupe o espaço completo */
+    left: 0; /* Começa no início do contêiner */
+    top: 0; /* Alinhado ao topo do contêiner */
+    bottom: 0; /* Alinhado à parte inferior do contêiner */
+    width: 0; /* Inicialmente 0% */
+}
+
+@keyframes progress-bar-animation {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .progress-container span {
     margin-left: 10px;
     font-size: 14px;
-    color: #333;
+    color: #080000;
 }
 
 .profile-menu {
