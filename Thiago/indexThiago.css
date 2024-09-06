@@ -105,6 +105,7 @@ color: rgb(240, 236, 6)
     background-color: #e0e0e0;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
 }
 
 .progress-bar {
@@ -113,9 +114,26 @@ color: rgb(240, 236, 6)
     text-align: center;
     line-height: 30px;
     color: white;
-    border-radius: 20px 0 0 25px;
+    border-radius: 30px 0 0 75px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: progress-bar-animation 3s ease-in-out;
     transition: width 0.4s ease;
+    position: absolute; /* Para garantir que ocupe o espaço completo */
+    left: 0; /* Começa no início do contêiner */
+    top: 0; /* Alinhado ao topo do contêiner */
+    bottom: 0; /* Alinhado à parte inferior do contêiner */
+    width: 0; /* Inicialmente 0% */
 }
+
+@keyframes progress-bar-animation {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 
 .progress-container span {
     margin-left: 10px;

@@ -12,23 +12,6 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
         
       }
-  
-
-  function toggleMenu() {
-      const menu = document.getElementById("adminMenu");
-      if (menu.style.display === "none" || menu.style.display === "") {
-          menu.style.display = "block";
-      } else {
-          menu.style.display = "none";
-      }
-  }
-
-      const logoutButton = document.getElementById("logout-btn");
-      logoutButton.addEventListener("click", function() {
-          localStorage.clear();
-          window.location.href = "indexThiago.html";
-      });
-
 
 function updateProgressBar(progressBarId, progressPercentId, percent) {
     const progressBar = document.getElementById(progressBarId);
