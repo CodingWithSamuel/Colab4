@@ -1,99 +1,37 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfis</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-  </head>
-
-  <body>
-    <div class="botao-voltar hidden">
-      <a href="index.html" id="VoltarBtn"
-        ><i class="fas fa-arrow-left"></i> Voltar </a>
-    </div>
-
-
-    <div class="container">
-      <div class="title">Sobre Nós</div>
-
-      <div class="profiles">
-        <div class="profile" data-profile="Samuel">
-          <img
-            src="./Samuel/imgs/WhatsApp Image 2024-05-14 at 14.50.25 (1).jpeg"
-            alt="Samuel"
-          />
-          <p>Samuel</p>
-        </div>
-
-        <div class="profile" data-profile="Thiago">
-          <img src="./Thiago/FAchiniPicture.jpg" alt="Thiago" />
-          <p>Thiago</p>
-        </div>
-
-        <div class="profile" data-profile="GuiCaetano">
-          <img src="./GuiCaetano/caetanofoto.jpeg" alt="GuiCaetano" />
-          <p>GuiCaetano</p>
-        </div>
-
-        <div class="profile" data-profile="Duarte">
-          <img src="./Duarte/Duartefoto.jpg" alt="Duarte" />
-          <p>Duarte</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="content" class="hidden"></div>
-  --><!-- Botão de troca de tema -->
-    <!--<button class="theme-toggle" id="theme-toggle">☾𖤓</button>
-     BOTÃO DE TROCA TEMAS -THIAGO
-    <script src="index.js"></script>
-  </body>
-</html> -->
-
-
-   <!--teste de codigo novo tem que linkar o html-->
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfis</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div id="menu" class="menu">
-       <button id="themeToggleButton" class="button" onclick="toggleTheme()">☀☾</button>
-       <div class="container">
-        <div class="profile" data-name="html aaqui" data-img="Thiago/FAchiniPicture.jpg" onclick="selectProfile(this)">
-            <img src="Thiago/FAchiniPicture.jpg" alt="Thiago">
-          <center><p>Thiago</p></center>
-        </div>
-        <div class="profile" data-name="html aaqui" data-img="Samuel/imgs/FotoPerfil.jpg" onclick="selectProfile(this)">
-            <img src="Samuel/imgs/WhatsApp Image 2024-05-14 at 14.50.25 (1).jpeg" alt="Samuel">
-            <center><p>Samuel</p></center>
-        </div>
-        <div class="profile" data-name="html aaqui" data-img="Duarte/Duartefoto.jpg" onclick="selectProfile(this)">
-            <img src="Duarte/Duartefoto.jpg" alt="Duarte">
-            <center><p>Duarte</p></center>
-        </div>
-        <div class="profile" data-name="html aaqui" data-img="GuiCaetano/caetanofoto.jpeg" onclick="selectProfile(this)">
-          <img src="GuiCaetano/caetanofoto.jpeg" alt="GuiCaetano">
-          <center><p>Caetano</p></center>
-      </div>
-    </div>
-  </div>
-
-    <div id="selectedProfile" class="selectedProfile">
-        <button id="backButton" class="button" onclick="goBack()">Voltar</button>
-        <button id="themeToggleButton" class="button" onclick="toggleTheme()">☀☾</button>
-        <div id="profileDetails">
-            <img id="selectedImage" src="" alt="Perfil Selecionado">
-            <p id="profileName"></p>
-        </div>
-    </div>
-
-    <script src="index.js"></script>
-</body>
-</html>
+   <html lang="pt-BR">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Devs</title>
+       <link rel="stylesheet" href="index.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+       <div class="overlay"></div>
+       <button id="theme-toggle" onclick="toggleTheme()">
+           <i id="theme-icon" class="fas fa-moon"></i>
+       </button>
+       <h1 class="title">Sobre Nós</h1>
+       <div class="profile-container">
+           <div class="profile" onclick="loadProfile('Samuel/indexSamuel.html')">
+               <img src="Samuel/imgs/WhatsApp Image 2024-05-14 at 14.50.25 (1).jpeg" alt="Perfil 1">
+               <div class="profile-name">Samuel</div>
+           </div>
+           <div class="profile" onclick="loadProfile('Thiago/indexThiago.html')">
+               <img src="Thiago/FAchiniPicture.jpg" alt="Perfil 2">
+               <div class="profile-name">Thiago</div>
+           </div>
+           <div class="profile" onclick="loadProfile('GuiCaetano/indexGuiCaetano.html')">
+               <img src="GuiCaetano/caetanofoto.jpeg" alt="Perfil 3">
+               <div class="profile-name">Caetano</div>
+           </div>
+           <div class="profile" onclick="loadProfile('Duarte/indexDuarte.html')">
+               <img src="Duarte/Duartefoto.jpg" alt="Perfil 4">
+               <div class="profile-name">Duarte</div>
+           </div>
+       </div>
+       <script src="index.js"></script>
+   </body>
+   </html>
