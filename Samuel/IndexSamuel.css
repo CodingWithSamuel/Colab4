@@ -36,53 +36,50 @@ body {
 
 .slider {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 80%; /* Ajuste a largura para 80% da tela */
+    height: 500px; /* Ajuste a altura para 500px */
     overflow: hidden;
-    border-radius: 10px;
+    margin: 0 auto; /* Centralize o slider */
 }
 
 .slide {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: none;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-.caption {
+.slider .active {
+    display: block;
+}
+
+/* Adicione um controle para mudar de slide */
+.slider .controls {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
-@keyframes slideAnimation {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+.slider .controls button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.projects .slide:nth-child(1) {
-    animation: slideAnimation 15s infinite;
-}
-
-.projects .slide:nth-child(2) {
-    animation: slideAnimation 15s infinite 5s;
-}
-
-.projects .slide:nth-child(3) {
-    animation: slideAnimation 15s infinite 10s;
+.slider .controls button:hover {
+    background-color: #ccc;
 }
 
 /* Demais estilos permanecem iguais */
@@ -146,10 +143,6 @@ footer {
 .social-icons a:hover {
     color: rgb(0, 162, 255);
     /* Cor ao passar o mouse (pode personalizar) */
-}
-
-section p1 {
-    color: rgb(255, 251, 0)
 }
 
 .countainer {

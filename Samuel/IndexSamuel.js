@@ -1,20 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const controls = document.querySelector('.controls');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-    }
+let currentSlide = 0;
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
+function showSlide() {
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+}
 
-    setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
-});
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide();
+}
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+setInterval(nextSlide, 3000); // Mudar de slide a cada 3 segundos
 
 function updateProgressBar(progressBarId, progressPercentId, percent) {
     const progressBar = document.getElementById(progressBarId);
