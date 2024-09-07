@@ -36,7 +36,9 @@ function updateProgressBar(progressBarId, progressPercentId, percent) {
     const progressPercent = document.getElementById(progressPercentId);
 
     progressBar.style.width = percent + '%';
+    progressBar.style.transform = `scaleX(${percent / 100})`; // Adiciona a transformação
     progressPercent.textContent = percent + '%';
 }
+
 updateProgressBar('progressBar1', 'progressPercent1', 20); // BARRA 1
 updateProgressBar('progressBar2', 'progressPercent2', 100); // BARRA 2

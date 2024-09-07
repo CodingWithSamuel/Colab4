@@ -2,13 +2,14 @@ body {
     color: #000000;
     background: url('##') no-repeat center center fixed;
     background-size: cover;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cochin', Georgia, Times, 'Times New Roman', serif;
     perspective: 1000px; /* Para animações 3D */
 }
 
 .container {
     padding: 0 40px;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .languages {
@@ -18,6 +19,7 @@ body {
     color: #fff;
     text-align: center;
     margin-bottom: 20px;
+    animation: slideInLeft 1s ease-in-out;
 }
 
 .languages-list {
@@ -32,14 +34,18 @@ body {
     border-radius: 5px;
     color: #fff;
     font-size: 18px;
+    animation: bounceIn 1s ease-in-out;
 }
 
 .slider {
     position: relative;
-    width: 80%; /* Ajuste a largura para 80% da tela */
-    height: 500px; /* Ajuste a altura para 500px */
+    width: 60%; /* Ajuste a largura para 60% da tela */
+    height: 300px; /* Ajuste a altura para 300px */
     overflow: hidden;
     margin: 0 auto; /* Centralize o slider */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-in-out;
 }
 
 .slide {
@@ -49,40 +55,82 @@ body {
     width: 100%;
     height: 100%;
     display: none;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider .active {
     display: block;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.slider .active img {
+    transform: scale(1.1);
 }
 
 /* Adicione um controle para mudar de slide */
 .slider .controls {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
 .slider .controls button {
     background-color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider .controls button:hover {
     background-color: #ccc;
+    transform: scale(1.1);
 }
 
-/* Demais estilos permanecem iguais */
+.slider .controls button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+    transform: scale(0);
+}
+
+.slider .controls button:hover::before {
+    transform: scale(1.2);
+}
+
+.slider .controls button.prev::after {
+    content: '◀';
+    font-size: 24px;
+    color: #333;
+}
+
+.slider .controls button.next::after {
+    content: '▶';
+    font-size: 24px;
+    color: #333;
+}
 
 ul {
     display: flex;
@@ -90,12 +138,13 @@ ul {
     list-style-type: none;
     align-items: center;
     padding: 16px;
+    animation: slideInDown 1s ease-in-out;
 }
 
 a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-
+    transition: color 0.3s;
 }
 
 a:hover {
@@ -105,12 +154,17 @@ a:hover {
 
 h1 {
     color: black;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    animation: fadeIn 2s ease-in-out 0.5s;
 }
 
 .texto-junto {
     line-height: 1.4;
     margin: 0;
-
+    animation: fadeIn 2s ease-in-out 1s;
 }
 
 footer {
@@ -118,12 +172,14 @@ footer {
     padding: 200px 0;
     text-align: center;
     color: #fff;
+    animation: fadeIn 2s ease-in-out 1.5s;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    animation: slideInUp 1s ease-in-out;
 }
 
 .social-icons a {
@@ -149,11 +205,11 @@ footer {
     padding: 0 40px;
 }
 
-
 .curso-container {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    animation: slideInRight 1s ease-in-out;
 }
 
 .curso-container p {
@@ -185,6 +241,7 @@ footer {
     top: 0; /* Alinhado ao topo do contêiner */
     bottom: 0; /* Alinhado à parte inferior do contêiner */
     width: 0; /* Inicialmente 0% */
+    transform-origin: left; /* Adiciona a origem da transformação */
 }
 
 @keyframes progress-bar-animation {
@@ -206,8 +263,196 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .icons-container img {
     display: block;
+    transition: transform 0.3s;
+}
+
+.icons-container img:hover {
+    transform: scale(1.1);
+}
+
+.projects {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+    z-index: -1;
+    animation: gradient-animation 5s infinite alternate;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .slider {
+        width: 90%;
+        height: 200px;
+    }
+
+    .slider .controls button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .curso-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    .icons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        width: 100%;
+        height: 150px;
+    }
+
+    .slider .controls button {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .curso-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    .icons-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .projects {
+        padding: 5px;
+    }
 }
