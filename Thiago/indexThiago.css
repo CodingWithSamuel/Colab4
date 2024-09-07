@@ -232,3 +232,16 @@ color: rgb(240, 236, 6)
 .botao-voltar a:hover {
     background-color: #f80303;
 }
+
+/* botão tema*/
+/* Light theme styles */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark theme styles */
+  body.dark-theme {
+    background-color: #161616;
+    color: #f2f2f2;
+  }

@@ -23,3 +23,10 @@ function updateProgressBar(progressBarId, progressPercentId, percent) {
 updateProgressBar('progressBar1', 'progressPercent1', 25); // BARRA 1
 updateProgressBar('progressBar2', 'progressPercent2', 100); // BARRA 2
 updateProgressBar('progressBar3', 'progressPercent3', 25); //BARRA 3
+
+const themeToggle = document.getElementById('theme-toggle'); //botão tema
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+  document.body.classList.toggle('dark-theme');
+});
