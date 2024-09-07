@@ -87,49 +87,41 @@ body {
 }
 
 .slider .controls button {
-    background-color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #333; /* Borda preta */
+    width: 15px; /* Largura da bolinha */
+    height: 15px; /* Altura da bolinha */
+    border-radius: 50%; /* Forma de bolinha */
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    margin: 0 5px; /* Espaçamento entre as bolinhas */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.slider .controls button.active {
+    background-color: #333; /* Fundo preto para a bolinha ativa */
 }
 
 .slider .controls button:hover {
-    background-color: #ccc;
-    transform: scale(1.1);
-}
-
-.slider .controls button::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s;
-    transform: scale(0);
-}
-
-.slider .controls button:hover::before {
+    background-color: #333; /* Fundo preto ao passar o mouse */
     transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.slider .controls button.prev::after {
-    content: '◀';
-    font-size: 24px;
-    color: #333;
+.slider .controls button:active {
+    transform: scale(0.9); /* Efeito de clique */
 }
 
-.slider .controls button.next::after {
-    content: '▶';
-    font-size: 24px;
-    color: #333;
+/* Efeito de transição suave */
+.slider .slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider .slide.active {
+    opacity: 1;
 }
 
 ul {
@@ -164,7 +156,30 @@ h2 {
 .texto-junto {
     line-height: 1.4;
     margin: 0;
-    animation: fadeIn 2s ease-in-out 1s;
+    animation: fadeIn 2s ease-in-out 1s; /* Animação original */
+}
+
+/* Remover as classes e animações relacionadas à digitação */
+.texto-junto .typing,
+.texto-junto .restante {
+    display: inline; /* Garantir que o texto seja exibido inline */
+    border-right: none; /* Remover o cursor de digitação */
+    animation: none; /* Remover qualquer animação */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 footer {
@@ -454,5 +469,71 @@ footer {
 
     .projects {
         padding: 5px;
+    }
+}
+
+/* Animação de Fade-In para Imagens */
+img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Animação de Hover para Ícones Sociais */
+.social-icons a {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: rgb(0, 162, 255); /* Cor ao passar o mouse */
+}
+
+/* Animação de Fade-In para Seções */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px; /* Centraliza e adiciona margem inferior */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out, bounce 2s infinite;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
     }
 }
