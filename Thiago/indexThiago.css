@@ -24,14 +24,11 @@ a:hover {
     ; /* Cor ao passar o mouse (pode personalizar) */
 }
 
-img{
-
+.foto-perfil {
     width: 160px;
     height: 170px;
     border-radius: 50%;
     border: 5px solid rgb(0, 0, 0);
-
-
 }
 
 .center{
@@ -47,6 +44,21 @@ h1{
     margin: 0;
     text-align: justify;
 
+}
+.icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.icons-container img {
+    display: block;
+    transition: transform 1.3s;
+}
+
+.icons-container img:hover {
+    transform: scale(1.1);
 }
 
 footer {
@@ -181,4 +193,19 @@ color: rgb(240, 236, 6)
 
 .menu li a:hover {
     background-color: #ff1e00;
+}
+@media (max-width: 768px) {
+
+    .icons-container {
+        flex-direction: column;
+        gap: 10px;
+}
+}
+
+@media (max-width: 480px) {
+
+    .icons-container {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
