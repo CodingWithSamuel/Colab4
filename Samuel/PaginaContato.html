@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            transition: background 0.5s, color 0.5s;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transition: background 0.5s, transform 0.5s;
+        }
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .theme-toggle-button {
+            margin-left: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        .theme-toggle-button:hover {
+            color: #2575fc;
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .contact-info li {
+            margin: 20px 0;
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .contact-info li:hover {
+            transform: scale(1.05);
+        }
+        .contact-info li i {
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #2575fc;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background: #2575fc;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .contact-info li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info li a:hover {
+            color: #2575fc;
+        }
+        .dark-theme {
+            background: linear-gradient(to right, #232526, #414345);
+            color: #fff;
+        }
+        .dark-theme .container {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .dark-theme .back-button {
+            background: #232526;
+            color: #414345;
+        }
+        .dark-theme .back-button:hover {
+            background: #414345;
+            color: #232526;
+        }
+        .dark-theme .theme-toggle-button {
+            color: #414345;
+        }
+        .dark-theme .theme-toggle-button:hover {
+            color: #232526;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            .container {
+                padding: 15px;
+            }
+            .contact-info li {
+                font-size: 1em;
+            }
+            .back-button {
+                padding: 8px 16px;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contato
+            <button class="theme-toggle-button" onclick="toggleTheme()">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button>
+        </h1>
+        <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i><a href="mailto:samu1800.so@gmail.com">samu1800.so@gmail.com</a></li>
+            <li><i class="fab fa-instagram"></i><a href="https://instagram.com/samukzz_" target="_blank">@samukzz_</a></li>
+            <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/###########" target="_blank">LinkedIn</a></li>
+            <li><i class="fab fa-github"></i><a href="https://github.com/CodingWithSamuel" target="_blank">GitHub</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/11943051625" target="_blank">WhatsApp</a></li>
+        </ul>
+        <a href="indexSamuel.html" class="back-button">Voltar para a Página Inicial</a>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const themeIcon = document.getElementById('theme-icon');
+            if (document.body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+    </script>
+</body>
+</html>
