@@ -53,8 +53,8 @@ a {
 
 /* Estilo do link ao passar o mouse */
 a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o tamanho do link */
+    text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho do link */
 }
 
 /* Estilo do ícone dentro do link */
