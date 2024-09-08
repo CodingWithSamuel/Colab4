@@ -10,7 +10,7 @@ ul {
     list-style-type: none;
     align-items: center;
     padding: 16px;
-    margin: 20px;
+   
 }
 
 a {
@@ -38,37 +38,20 @@ a:hover {
 
 .texto-junto {
     line-height: 1.4;
-    margin: 20px;
     text-align: justify;
     justify-content: center;
 
 }
-/* CSS para a container de ícones */
 .icons-container {
-    display: flex;               /* Flexbox para alinhar os itens lado a lado */
-    justify-content: center;     /* Centraliza os itens horizontalmente */
-    gap: 20px;                   /* Espaço entre os itens */
-    flex-wrap: wrap;             /* Permite que os itens se movam para uma nova linha se não houver espaço suficiente */
-    margin: 0;                   /* Remove margens extras que possam estar afetando o layout */
-    padding: 0;                  /* Remove preenchimentos extras que possam estar afetando o layout */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
-
-.icons-container img {
-    display: block;              /* Remove o espaço extra abaixo das imagens */
-    transition: transform 1.3s;  /* Transição suave para o efeito de hover */
-    max-width: 100%;             /* Garante que as imagens não ultrapassem o contêiner */
-    height: auto;                /* Mantém a proporção das imagens */
-}
-
-/* Efeito de hover para aumentar o tamanho da imagem */
 .icons-container img:hover {
-    transform: scale(1.1);       /* Aumenta o tamanho da imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Adiciona uma borda opcional para verificar o tamanho do contêiner */
-.icons-container {
-    border: none; /* Remove isso depois de verificar o layout */
-}
 
 
 
@@ -271,4 +254,20 @@ body.light-theme {
 /* Efeito ao passar o mouse sobre o botão */
 #translate-btn:hover {
     background-color: #f80303; /* Cor de fundo mais escura quando o cursor está sobre o botão */
+}
+@media (max-width: 480px) {
+    .foto-perfil {
+        width: 100px; /* Reduz ainda mais o tamanho da imagem de perfil */
+        height: 110px;
+    }
+    .icons-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .text-justify {
+        margin: 10px; /* Ajusta o espaçamento em dispositivos menores */
+    }
+    footer {
+        padding: 30px 0; /* Menos padding para dispositivos muito pequenos */
+    }
 }
