@@ -245,3 +245,31 @@ body.light-theme {
     background-color: #161616;
     color: #f2f2f2;
   }
+  #theme-toggle {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+/* Estilos gerais para o botão de tradução */
+#translate-btn {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remover borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+#translate-btn:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura quando o cursor está sobre o botão */
+}

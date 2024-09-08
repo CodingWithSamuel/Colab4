@@ -3,123 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Fachini </title>
+    <title>Fachini</title>
     <link rel="stylesheet" href="indexThiago.css">
-    
-
 </head>
 <body>
-    <div class="countainer">
+    <div class="container">
         <nav>
             <ul>
-                
-                
-                <li> 
-                    <i class='bx bxl-github' ></i>
-                    <a href="https://github.com/ThiagoFachini">
-                        Projetos
-                    </a>
-               
+                <li>
+                    <i class='bx bxl-github'></i>
+                    <a href="https://github.com/ThiagoFachini">Projetos</a>
                 </li>
-                
                 <li>
                     <i class='bx bxs-contact'></i>
-                     <a href="contact fachini.html"> Contato </a>
-                    </li>
-    
+                    <a href="contact-fachini.html">Contato</a>
+                </li>
                 <!-- Container para a imagem de perfil -->
-    <li id="profile-pic-container" style="display: none;">
-        <div class="profile-menu">
-            <img class="foto-perfil" src="FAchiniPicture.jpg" alt="Foto de Perfil" style="border-radius: 50%; width: 40px; height: 40px;">
-            <div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div> <!-- Ícone de lista -->
-            <ul class="menu" id="adminMenu">
-                <li><a href="########" onclick="aprovarUsuarios()">Aprovar Usuários</a></li>
-                <li><a href="########">Configurações</a></li>
-            </ul>
-        <button id="logout-btn" class="btn-logout">Sair</button>
-    </li>
-    
-               
+                <li id="profile-pic-container" style="display: none;">
+                    <div class="profile-menu">
+                        <img id="profile-pic" class="foto-perfil" src="FAchiniPicture.jpg" alt="Foto de Perfil" style="border-radius: 50%; width: 40px; height: 40px;">
+                        <div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div> <!-- Ícone de lista -->
+                        <ul class="menu" id="adminMenu">
+                            <li><a href="########" onclick="aprovarUsuarios()">Aprovar Usuários</a></li>
+                            <li><a href="########">Configurações</a></li>
+                        </ul>
+                        <button id="logout-btn" class="btn-logout">Sair</button>
+                    </div>
+                </li>
             </ul>
         </nav>
         
         <header> 
+            <button id="translate-btn">Translate to English</button>
             <button id="theme-toggle">☀☾</button>
             <div class="center"> 
                 <img class="foto-perfil" src="FAchiniPicture.jpg" alt="Foto de Perfil">
             </div> 
-            <center> <h1> Thiago Fachini </h1> </center>
-            <h2> Conhecimentos em Python-JavaScript-HTML </h2>
-     </header>
-     <main>
-        <section>
-            <h3></h3>
-            <div class="icons-container">
-              <img alt="JavaScript" height="30" width="40"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
-              <img alt="HTML" height="30" width="40"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
-              <img alt="CSS" height="30" width="40"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
-                <img alt="Python" height="30" width="40"
-                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" />
-            </div>
-          </section>
-        <section>
-            <h3> Sobre Mim </h3>
-            <p class="texto-junto">
-                Muito bem-vindo! Meu nome é Thiago Fachini, tenho 18 anos e sou um membro da comunidade da tecnologia em constante aprendizado. 
-                Atualmente, estou cursando o 2º semestre de Ciências da Computação, onde estou adquirindo e aprofundando meus conhecimentos em diversas áreas da TI. 
-                <br><br>
-                Tenho experiência prática com Python, JavaScript e HTML, e estou sempre buscando novas oportunidades para aplicar e expandir esses conhecimentos. 
-                Meu objetivo é encontrar uma posição na área de tecnologia, onde eu possa contribuir colaborar para o desenvolvimento constante dos meus conhecimentos e da área da TI.
-                <br> <br>
-                Estou entusiasmado para ingressar profissionalmente na área e fazer parte de uma equipe que busque inovação e desafios. 
-                
-                <br> <br>
+            <center><h1 id="header-name">Thiago Fachini</h1></center>
+            <h2 id="header-skills">Conhecimentos em Python-JavaScript-HTML</h2>
+        </header>
+        
+        <main>
+            <section>
+                <h3 id="section-about-title">Sobre Mim</h3>
+                <p id="section-about-text" class="texto-junto">
+                    Muito bem-vindo! Meu nome é Thiago Fachini, tenho 18 anos e sou um membro da comunidade da tecnologia em constante aprendizado. 
+                    Atualmente, estou cursando o 2º semestre de Ciências da Computação, onde estou adquirindo e aprofundando meus conhecimentos em diversas áreas da TI. 
+                    <br><br>
+                    Tenho experiência prática com Python, JavaScript e HTML, e estou sempre buscando novas oportunidades para aplicar e expandir esses conhecimentos. 
+                    Meu objetivo é encontrar uma posição na área de tecnologia, onde eu possa contribuir colaborar para o desenvolvimento constante dos meus conhecimentos e da área da TI.
+                    <br> <br>
+                    Estou entusiasmado para ingressar profissionalmente na área e fazer parte de uma equipe que busque inovação e desafios. 
+                    <br> <br>
                 </p>
-        </section>
-        
-        <section>
-            <h3> Projetos </h3>
-            <p>
-            Site Portifólio - JavaScript + HTML + CSS + BANCO DE DADOS
-            </p>
-        </section>
-    
-        <section>
-            <h3>Cursos</h3>
-            <div class="curso-container">
-                <p>Ciencias da Computação Bacharelado - 2º Semestre <br> (Em Andamento)</p>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar1"></div>
-                    <span id="progressPercent1"> </span>
-                </div>
-            </div>
-            <div class="curso-container">
-                <p> Gestão de Projetos - Faculdade Anhanguera (Concluido) </span></p>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar2"></div>
-                    <span id="progressPercent2"></span>
-                </div>
-            </div>
-            <div class="curso-container">
-                <p> Proteção de Dados - Faculdade Anhanguera (Em Andamento) </span></p>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar3"></div>
-                    <span id="progressPercent3"></span>
-                </div>
+            </section>
             
-      </div>
-
-      <!-- botão voltar -->
-                </footer>
+            <section>
+                <h3 id="section-projects-title">Projetos</h3>
+                <p id="section-projects-text">
+                    Site Portifólio - JavaScript + HTML + CSS + BANCO DE DADOS
+                </p>
+            </section>
         
-                <div class="botao-voltar">
-                    <a href="/4-PATETAS/index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
-                </div>  
-                </footer>
-    <script src="indexThiago.js"></script>
+            <section>
+                <h3 id="section-courses-title">Cursos</h3>
+                <div class="curso-container">
+                    <p id="course1">Ciencias da Computação Bacharelado - 2º Semestre <br> (Em Andamento)</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar1"></div>
+                        <span id="progressPercent1"></span>
+                    </div>
+                </div>
+                <div class="curso-container">
+                    <p id="course2">Gestão de Projetos - Faculdade Anhanguera (Concluído)</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar2"></div>
+                        <span id="progressPercent2"></span>
+                    </div>
+                </div>
+                <div class="curso-container">
+                    <p id="course3">Proteção de Dados - Faculdade Anhanguera (Em Andamento)</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar3"></div>
+                        <span id="progressPercent3"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- botão voltar -->
+            <div class="botao-voltar">
+                <a href="/4-PATETAS/index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
+            </div>
+        </main>
+    </div>
     
+    <script src="indexThiago.js"></script>
 </body>
 </html>
