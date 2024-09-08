@@ -15,15 +15,23 @@
       <ul>
         <li>
           <i class="bx bxs-user"></i>
-          <a href="indexSamuel.html"> Sobre Mim </a>
+          <a href="indexSamuel.html" data-translate="Sobre Mim"> Sobre Mim </a>
         </li>
         <li>
           <i class="bx bxl-github"></i>
-          <a href="https://github.com/CodingWithSamuel"> Projetos </a>
+          <a href="https://github.com/CodingWithSamuel" data-translate="Projetos"> Projetos </a>
         </li>
         <li>
           <i class="bx bxs-contact"></i>
-          <a href="PaginaContato.html"> Contato </a>
+          <a href="PaginaContato.html" data-translate="Contato"> Contato </a>
+        </li>
+        <li>
+          <i class="bx bx-moon" id="theme-icon"></i>
+          <a href="#" onclick="toggleTheme()" data-translate="Trocar Tema"> Trocar Tema </a>
+        </li>
+        <li>
+          <i class="bx bx-globe"></i>
+          <a href="#" onclick="translatePage()" data-translate="Traduzir Página"> Traduzir Página </a>
         </li>
       </ul>
     </nav>
@@ -33,7 +41,7 @@
         <img src="/4-PATETAS/Samuel/imgs/WhatsApp Image 2024-05-14 at 14.50.25 (1).jpeg" alt="Foto de Perfil de Samuel Oliveira">
       </div>
       <h1>Samuel Oliveira</h1>
-      <h2>Estagiário de T.I - HTML + CSS</h2>
+      <h2 data-translate="Estagiário de T.I - HTML + CSS">Estagiário de T.I - HTML + CSS</h2>
     </header>
 
     <main>
@@ -51,28 +59,31 @@
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
           <img alt="CSS" height="30" width="40"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" /> 
-               
         </div>
       </section>
       <section>
-        <h3>Sobre Mim</h3>
-        <p class="texto-junto">
+        <h3 data-translate="Sobre Mim">Sobre Mim</h3>
+        <p class="texto-junto" data-translate="Olá! Meu nome é Samuel Oliveira, tenho 18 anos e sou um entusiasta da tecnologia em constante aprendizado. Atualmente, estou cursando o 2º semestre de Ciências da Computação, onde estou aprofundando meus conhecimentos em diversas áreas da TI.">
           Olá! Meu nome é Samuel Oliveira, tenho 18 anos e sou um entusiasta
           da tecnologia em constante aprendizado. Atualmente, estou cursando o
           2º semestre de Ciências da Computação, onde estou aprofundando meus
           conhecimentos em diversas áreas da TI.
           <br /><br />
+          <span data-translate="Tenho experiência prática com HTML, CSS e banco de dados, e estou sempre buscando novas oportunidades para aplicar e expandir esses conhecimentos. Meu objetivo é encontrar uma posição na área de tecnologia, onde eu possa contribuir com minha paixão e vontade de aprender.">
           Tenho experiência prática com HTML, CSS e banco de dados, e estou
           sempre buscando novas oportunidades para aplicar e expandir esses
           conhecimentos. Meu objetivo é encontrar uma posição na área de
           tecnologia, onde eu possa contribuir com minha paixão e vontade de
           aprender.
+          </span>
           <br />
           <br />
+          <span data-translate="Estou empolgado para crescer na área e fazer parte de uma equipe que valorize inovação e colaboração. Se você está procurando alguém que é curioso, dedicado e sempre disposto a enfrentar novos desafios, eu sou a pessoa certa!">
           Estou empolgado para crescer na área e fazer parte de uma equipe que
           valorize inovação e colaboração. Se você está procurando alguém que
           é curioso, dedicado e sempre disposto a enfrentar novos desafios, eu
           sou a pessoa certa!
+          </span>
           <br />
           <br />
         </p>
@@ -80,7 +91,7 @@
 
       <!-- PRECISA FAZER ALTERAÇÕES NA ABA DE PROJETOS -->
       <section class="projects">
-        <h3>Projetos</h3>
+        <h3 data-translate="Projetos">Projetos</h3>
         <div class="slider">
           <div class="slide active">
             <img src="imgs/beach-9002134_1280.jpg" alt="Projeto 1">
@@ -95,9 +106,9 @@
       </section>
 
       <section>
-        <h3>Cursos</h3>
+        <h3 data-translate="Cursos">Cursos</h3>
         <div class="curso-container">
-          <p>
+          <p data-translate="Ciencias da Computação - 2º Semestre (Em Andamento)">
             Ciencias da Computação - 2º Semestre <br />
             (Em Andamento)
           </p>
@@ -108,7 +119,7 @@
         </div>
         <div class="curso-container">
           <p>
-            <span style="color: rgb(0, 0, 0)">
+            <span style="color: rgb(0, 0, 0)" data-translate="Gestão de Projetos - Faculdade Anhanguera (Concluído)">
               Gestão de Projetos - Faculdade Anhanguera (Concluído)
             </span>
           </p>
@@ -132,6 +143,37 @@
     </footer>
 
     <script src="indexSamuel.js"></script>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        const themeIcon = document.getElementById('theme-icon');
+        if (document.body.classList.contains('dark-theme')) {
+          themeIcon.classList.remove('bx-moon');
+          themeIcon.classList.add('bx-sun');
+        } else {
+          themeIcon.classList.remove('bx-sun');
+          themeIcon.classList.add('bx-moon');
+        }
+      }
+
+      function translatePage() {
+        const elementsToTranslate = document.querySelectorAll('[data-translate]');
+        
+        if (currentLanguage === 'pt') {
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                originalContent.set(element, element.innerHTML);
+                element.innerHTML = translations.en[key];
+            });
+            currentLanguage = 'en';
+        } else {
+            elementsToTranslate.forEach(element => {
+                element.innerHTML = originalContent.get(element);
+            });
+            currentLanguage = 'pt';
+        }
+      }
+    </script>
   </div>
 </body>
 
