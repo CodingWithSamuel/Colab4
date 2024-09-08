@@ -476,16 +476,6 @@ footer {
     }
 }
 
-/* Animação de Fade-In para Imagens */
-img {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-img.loaded {
-    opacity: 1;
-}
-
 /* Animação de Hover para Ícones Sociais */
 .social-icons a {
     transition: transform 0.3s, color 0.3s;
@@ -516,18 +506,12 @@ section.visible {
     overflow: hidden;
     border: 5px solid #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 2s ease-in-out, bounce 2s infinite;
 }
 
 .profile-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.profile-picture:hover img {
-    transform: scale(1.1);
 }
 
 @keyframes bounce {
