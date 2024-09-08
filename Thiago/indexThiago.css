@@ -37,50 +37,37 @@ a:hover {
 }
 
 .texto-junto {
-    text-align: justify;
     line-height: 1.4;
-    margin: 0;
+    text-align: justify;
+    justify-content: center;
+    margin: 20px;
 
 }
 
 
 /* Container de ícones */
 .icons-container {
-    display: flex; /* Flexbox para alinhamento lado a lado */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    gap: 20px; /* Espaço entre os ícones */
-    flex-wrap: nowrap; /* Impede que os ícones se movam para uma nova linha */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    padding: 0 10px; /* Adiciona algum espaçamento interno */
+    display: flex;              /* Usar Flexbox para alinhamento horizontal */
+    justify-content: center;    /* Centraliza os ícones horizontalmente */
+    align-items: center;        /* Alinha os ícones verticalmente */
+    gap: 20px;                  /* Espaçamento entre os ícones */
+    overflow-x: auto;           /* Adiciona rolagem horizontal se necessário */
+    white-space: nowrap;        /* Impede que os ícones quebrem para a linha seguinte */
+    padding: 10px;              /* Espaçamento interno para não ficar colado às bordas */
 }
 
-/* Imagens dentro do container de ícones */
+/* Estilo para as imagens dos ícones */
 .icons-container img {
-    display: block;
-    transition: transform 1.3s;
-    max-width: 40px; /* Limita a largura máxima dos ícones */
-    height: auto; /* Mantém a proporção */
+    max-width: 50px;            /* Define a largura máxima dos ícones */
+    height: auto;               /* Mantém a proporção das imagens */
+    display: block;             /* Remove o espaço extra abaixo das imagens */
 }
 
 /* Efeito de hover para aumentar o tamanho da imagem */
 .icons-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);      /* Aumenta o tamanho da imagem ao passar o mouse */
+    transition: transform 1.3s; /* Transição suave para o efeito de hover */
 }
-
-/* Ajustes para dispositivos muito pequenos */
-@media (max-width: 480px) {
-    .icons-container {
-        flex-wrap: nowrap; /* Garante que os ícones permaneçam na mesma linha */
-        overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-        gap: 10px; /* Reduz o espaço entre os ícones em telas menores */
-    }
-}
-
-
-
-
-
 
 footer {
     background-color: rgba(0, 0, 0, 0);
