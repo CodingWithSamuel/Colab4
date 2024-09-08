@@ -30,16 +30,15 @@ themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light-theme');
   document.body.classList.toggle('dark-theme');
 });
-// Tradução de conteúdo
 const translations = {
   "header-name": "Thiago Fachini",
   "header-skills": "Knowledge in Python-JavaScript-HTML",
   "section-about-title": "About Me",
   "section-about-text": `Welcome! My name is Thiago Fachini, I am 18 years old and a member of the constantly learning tech community.
-      I am currently in the 2nd semester of Computer Science, where I am gaining and deepening my knowledge in various areas of IT.
+      I am currently in the 2nd semester of Computer Science, where I am gaining and deepening my knowledge in various areas of I.T. .
       <br><br>
-      I have practical experience with Python, JavaScript, and HTML, and am always looking for new opportunities to apply and expand these skills.
-      My goal is to find a position in the tech field where I can contribute and collaborate for the continuous development of my skills and the IT field.
+      I have practical experience with Python, JavaScript,CSS and HTML, and am always looking for new opportunities to apply and expand these skills.
+      My goal is to find a position in the tech field where I can contribute and collaborate for the continuous development of my skills and the I.T. field.
       <br> <br>
       I am excited to start professionally in the field and be part of a team that seeks innovation and challenges.
       <br> <br>`,
@@ -50,26 +49,24 @@ const translations = {
   "section-courses-title": "Courses",
   "course1": "Computer Science Bachelor's - 2nd Semester <br> (In Progress)",
   "course2": "Project Management - Anhanguera College (Completed)",
-  "course3": "Data Protection - Anhanguera College (In Progress)"
+  "course3": "Data Protection - Anhanguera College (In Progress)",
+  "nav-projects": "Projects",
+  "nav-contact": "Contact",
+  "btn-back": "Back to Home Page"
 };
 
-const translateButton = document.getElementById('translate-btn');
-if (translateButton) {
-  translateButton.addEventListener('click', function() {
-      // Alterna entre tradução e idioma original
-      const isTranslated = document.body.classList.toggle('translated');
-
-      for (const id in translations) {
-          const element = document.getElementById(id);
-          if (element) {
-              element.innerHTML = isTranslated ? translations[id] : originalContent[id];
-          }
-      }
-  });
-}
-
-// Armazena o conteúdo original
 const originalContent = {};
 document.querySelectorAll('[id]').forEach(el => {
   originalContent[el.id] = el.innerHTML;
 });
+
+document.getElementById('translate-btn').addEventListener('click', function() {
+  const isTranslated = document.body.classList.toggle('translated');
+  for (const id in translations) {
+      const element = document.getElementById(id);
+      if (element) {
+          element.innerHTML = isTranslated ? translations[id] : originalContent[id];
+      }
+  }
+});
+
