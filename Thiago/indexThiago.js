@@ -69,4 +69,15 @@ document.getElementById('translate-btn').addEventListener('click', function() {
       }
   }
 });
+document.getElementById('translate-btn').addEventListener('click', function() {
+  const isEnglish = document.documentElement.lang === 'en';
+  document.documentElement.lang = isEnglish ? 'pt-BR' : 'en';
 
+  document.querySelectorAll('[data-en]').forEach(element => {
+      const ptText = element.textContent.trim();
+      const enText = element.getAttribute('data-en');
+      element.textContent = isEnglish ? enText : ptText;
+  });
+
+  this.textContent = isEnglish ? 'Translate to English' : 'Traduzir para Português';
+});

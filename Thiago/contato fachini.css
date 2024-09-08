@@ -1,75 +1,99 @@
+/* Estilo base do corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #999494;
+    background-color: #999494; /* Cor de fundo do corpo */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Usa toda a altura da tela */
+    margin: 0; /* Remove a margem padrão */
 }
 
+/* Container de contato */
 .contato-container {
-    background-color: #fdfdfd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
+    background-color: #fdfdfd; /* Cor de fundo do container */
+    padding:60px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Alinha o texto ao centro */
+    max-width: 400px; /* Largura máxima */
+    width: 100%; /* Largura total disponível */
+    position: relative; /* Permite o posicionamento absoluto dos elementos filhos */
 }
 
-h1 {
-    color: #000000;
+/* Títulos */
+h1, h2 {
+    color: #000000; /* Cor do texto */
 }
 
+/* Espaçamento superior para h2 */
 h2 {
-    color: #000000;
     margin-top: 20px;
 }
 
+/* Estilo do parágrafo */
 p {
-    color: #000000;
-    line-height: 1.5;
+    color: #000000; /* Cor do texto */
+    line-height: 1.5; /* Altura da linha */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    justify-content: center; /* Alinha os itens ao centro horizontalmente */
+    gap: 10px; /* Espaçamento entre os itens */
 }
 
+/* Estilo do link */
 a {
-    color: #000000;
-    text-decoration: none;
+    color: #000000; /* Cor do texto do link */
+    text-decoration: none; /* Remove a decoração padrão dos links */
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    transition: transform 0.3s ease; /* Transição suave para transformação */
 }
 
+/* Estilo do link ao passar o mouse */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do link */
 }
 
+/* Estilo do ícone dentro do link */
+a i {
+    transition: transform 0.2s ease; /* Transição suave para transformação */
+}
+
+/* Estilo do ícone ao passar o mouse */
+a:hover i {
+    transform: scale(1.7); /* Aumenta o tamanho do ícone */
+}
+
+
+/* Ícones de redes sociais */
 .fa-envelope, .fa-whatsapp, .fa-github, .fa-linkedin, .fa-instagram {
-    color: #006eff;
+    color: #006eff; /* Cor dos ícones */
 }
 
+/* Botão de voltar */
 .botao-voltar {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento superior */
+    position: absolute; /* Posiciona o botão absoluto em relação ao container pai */
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a centralização */
 }
 
 .botao-voltar a {
-    background-color: #ee0e06;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 40px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 20px;
-    left: 10px;
+    background-color: #0613c2; /* Cor de fundo do botão */
+    color: #020202; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 40px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    display: inline-flex; /* Usa flexbox para o alinhamento interno */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
 }
 
 .botao-voltar a:hover {
-    background-color: #1558b3;
+    background-color: #ff0000; /* Cor de fundo ao passar o mouse */
 }
+
