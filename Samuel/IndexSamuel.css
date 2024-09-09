@@ -461,9 +461,9 @@ footer {
         width: 100%;
     }
 
-  .social-icons {
-        flex-direction: column;
-        gap: 5px;
+    .social-icons {
+        flex-direction: row; /* Altere de column para row */
+        gap: 10px;
     }
 
     ul {
