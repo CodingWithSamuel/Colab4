@@ -15,7 +15,7 @@ Estamos desenvolvendo um site de portfólio colaborativo que permite a criação
 - [Licença](#licença) 
 
 ## Demonstração
-![Demonstração do Projeto](/4-PATETAS/img/video_colab4_GIF.gif)
+![Demonstração do Projeto](img/video_colab4_GIF.gif)
 
 <!-- [![Demonstração do Projeto](https://img.youtube.com/vi/ID_DO_VIDEO/maxresdefault.jpg)](https://www.youtube.com/watch?v=ID_DO_VIDEO) -->
 
