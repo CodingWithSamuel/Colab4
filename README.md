@@ -1,6 +1,6 @@
 # Colab4
 
-![Banner do Projeto](/4-PATETAS/img/ImagemdoProjeto_Colab4.jpeg)
+![Banner do Projeto](img/ImagemdoProjeto_Colab4.jpeg)
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/seu-usuario/seu-repositorio/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/seu-usuario/seu-repositorio/blob/main/LICENSE)
