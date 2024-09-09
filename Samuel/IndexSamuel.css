@@ -467,8 +467,8 @@ footer {
     }
 
     ul {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        gap: 15px;
     }
 
     .projects {
