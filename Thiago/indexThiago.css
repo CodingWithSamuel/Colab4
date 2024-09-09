@@ -13,7 +13,7 @@ html, body {
 
 body { 
     color: #000000;
-    background-color: rgb(129, 124, 124);
+    background-color: rgb(71, 66, 66);
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px; /* Espaçamento das bordas da tela */
     overflow-x: hidden; /* Garante que não haja rolagem horizontal */
@@ -28,9 +28,10 @@ ul {
 }
 
 a {
-    color: #000000;
+    color: #fffb00;
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    text-decoration: none;
 }
 
 a:hover {
