@@ -20,9 +20,10 @@ function updateProgressBar(progressBarId, progressPercentId, percent) {
     progressBar.style.width = percent + '%';
     progressPercent.textContent = percent + '%';
 }
-updateProgressBar('progressBar1', 'progressPercent1', 25); // BARRA 1
+updateProgressBar('progressBar1', 'progressPercent1', 37.5); // BARRA 1
 updateProgressBar('progressBar2', 'progressPercent2', 100); // BARRA 2
-updateProgressBar('progressBar3', 'progressPercent3', 25); //BARRA 3
+updateProgressBar('progressBar3', 'progressPercent3', 100); //BARRA 3
+updateProgressBar('progressBar4', 'progressPercent4', 20); // BARRA 4
 
 const themeToggle = document.getElementById('theme-toggle'); //botão tema
 
