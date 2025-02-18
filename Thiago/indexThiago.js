@@ -50,7 +50,8 @@ const translations = {
   "section-courses-title": "Courses",
   "course1": "Computer Science Bachelor's - 2nd Semester <br> (In Progress)",
   "course2": "Project Management - Anhanguera College (Completed)",
-  "course3": "Data Protection - Anhanguera College (In Progress)",
+  "course3": "Data Protection - Anhanguera College (Completed)",
+  "course4": "Green IT - Anhanguera College (In Progress)",
   "nav-projects": "Projects",
   "nav-contact": "Contact",
   "btn-back": "Back to Home Page"
