@@ -13,7 +13,7 @@ html, body {
 
 body { 
     color: #000000;
-    background-color: rgb(71, 66, 66);
+    background-color: rgb(253, 253, 253);
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px; /* Espaçamento das bordas da tela */
     overflow-x: hidden; /* Garante que não haja rolagem horizontal */
@@ -28,7 +28,7 @@ ul {
 }
 
 a {
-    color: #fffb00;
+    color: #ff0000;
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     text-decoration: none;
