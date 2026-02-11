@@ -20,7 +20,7 @@ function updateProgressBar(progressBarId, progressPercentId, percent) {
     progressBar.style.width = percent + '%';
     progressPercent.textContent = percent + '%';
 }
-updateProgressBar('progressBar1', 'progressPercent1', 50); // BARRA 1
+updateProgressBar('progressBar1', 'progressPercent1', 60); // BARRA 1
 updateProgressBar('progressBar2', 'progressPercent2', 100); // BARRA 2
 updateProgressBar('progressBar3', 'progressPercent3', 100); //BARRA 3
 updateProgressBar('progressBar4', 'progressPercent4', 100); // BARRA 4
