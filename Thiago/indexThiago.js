@@ -35,7 +35,7 @@ const translations = {
   "header-name": "Thiago Fachini",
   "header-skills": "Knowledge in Python-JavaScript-HTML",
   "section-about-title": "About Me",
-  "section-about-text": `Welcome! My name is Thiago Fachini, I am 18 years old and a member of the constantly learning tech community.
+  "section-about-text": `Welcome! My name is Thiago Fachini, I am 20 years old and a member of the constantly learning tech community.
       I am currently in the 5th semester of Computer Science, where I am gaining and deepening my knowledge in various areas of IT.
       <br><br>
       I have practical experience with Python, JavaScript, SQL, CSS and HTML, and am always looking for new opportunities to apply and expand these skills.
@@ -48,10 +48,10 @@ const translations = {
   "section-projects-text": "Portfolio Website - JavaScript + HTML + CSS + DATABASE",
   
   "section-courses-title": "Courses",
-  "course1": "Computer Science Bachelor's - 2nd Semester <br> (In Progress)",
+  "course1": "Computer Science Bachelor's - 5th Semester <br> (In Progress)",
   "course2": "Project Management - Anhanguera College (Completed)",
   "course3": "Data Protection - Anhanguera College (Completed)",
-  "course4": "Green IT - Anhanguera College (In Progress)",
+  "course4": "Green IT - Anhanguera College (Completed)",
   "nav-projects": "Projects",
   "nav-contact": "Contact",
   "btn-back": "Back to Home Page"
