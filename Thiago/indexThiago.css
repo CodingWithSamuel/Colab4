@@ -1,44 +1,36 @@
-/* Reset básico para margens e paddings */
-/* Reset básico para margens e paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
-body { 
-    color: #000000;
-    background-color: rgb(253, 253, 253);
+body {
+    color: #000;
+    background-color: rgb(129, 124, 124);
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 20px; /* Espaçamento das bordas da tela */
-    overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+    margin: 0;
 }
 
-ul { 
+.countainer {
+    padding: 0 40px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
     padding: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 a {
-    color: #ff0000;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-decoration: none;
 }
 
 a:hover {
-    color: rgb(140, 0, 255); /* Cor ao passar o mouse (pode personalizar) */
+    color: rgb(140, 0, 255);
 }
 
-.foto-perfil {
+img {
     width: 160px;
     height: 170px;
     border-radius: 50%;
@@ -49,59 +41,50 @@ a:hover {
     text-align: center;
 }
 
+h1 {
+    color: black;
+}
+
 .texto-junto {
-    line-height: 1.4;
-    text-align: justify;
-    justify-content: center;
-    margin: 20px;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/* Container de ícones */
-.icons-container {
-    display: flex;              /* Usar Flexbox para alinhamento horizontal */
-    justify-content: center;    /* Centraliza os ícones horizontalmente */
-    align-items: center;        /* Alinha os ícones verticalmente */
-    gap: 20px;                  /* Espaçamento entre os ícones */
-    overflow-x: auto;           /* Adiciona rolagem horizontal se necessário */
-    padding: 10px;              /* Espaçamento interno para não ficar colado às bordas */
-    white-space: nowrap;        /* Impede que os ícones quebrem para a linha seguinte */
-}
-
-/* Estilo para as imagens dos ícones */
-.icons-container img {
-    max-width: 50px;            /* Define a largura máxima dos ícones */
-    height: auto;               /* Mantém a proporção das imagens */
-    display: block;             /* Remove o espaço extra abaixo das imagens */
-}
-
-/* Efeito de hover para aumentar o tamanho da imagem */
-.icons-container img:hover {
-    transform: scale(1.1);      /* Aumenta o tamanho da imagem ao passar o mouse */
-    transition: transform 1.3s; /* Transição suave para o efeito de hover */
+main section {
+    margin-bottom: 24px;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0);
-    padding: 200px 0;
+    padding: 30px 0;
     text-align: center;
-    color: #fff;
 }
 
-.texto-projetos {
-    margin: 20px;
+.social-icons p {
+    margin: 8px 0;
 }
 
-.countainer {
-    padding: 0 40px;
-    align-items: center;
-    margin: 20px;
+.btn-logout {
+    display: block;
+    margin: 1px auto 0;
+    padding: 7px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn-logout:hover {
+    background-color: rgb(248, 5, 5);
+    color: black;
 }
 
 .curso-container {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    margin: 20px;
+    gap: 10px;
 }
 
 .curso-container p {
@@ -116,7 +99,6 @@ footer {
     background-color: #e0e0e0;
     border-radius: 25px;
     overflow: hidden;
-    position: relative;
 }
 
 .progress-bar {
@@ -125,24 +107,8 @@ footer {
     text-align: center;
     line-height: 30px;
     color: white;
-    border-radius: 30px 0 0 75px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: progress-bar-animation 3s ease-in-out;
+    border-radius: 20px 0 0 25px;
     transition: width 0.4s ease;
-    position: absolute; /* Para garantir que ocupe o espaço completo */
-    left: 0; /* Começa no início do contêiner */
-    top: 0; /* Alinhado ao topo do contêiner */
-    bottom: 0; /* Alinhado à parte inferior do contêiner */
-    width: 0; /* Inicialmente 0% */
-}
-
-@keyframes progress-bar-animation {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
 }
 
 .progress-container span {
@@ -158,8 +124,16 @@ footer {
     position: relative;
 }
 
+.profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 .menu-toggle {
-    font-size: 30px;
+    font-size: 22px;
+    border: none;
+    background: transparent;
     cursor: pointer;
 }
 
@@ -173,12 +147,12 @@ footer {
     padding: 10px;
     background-color: #000000;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
 
 .menu li {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .menu li a {
@@ -192,91 +166,17 @@ footer {
     background-color: #ff1e00;
 }
 
-/* Estilos gerais para o botão de tradução */
-#translate-btn {
-    margin: 20px;
-    background-color: #073ff7; /* Cor de fundo azul */
-    color: white; /* Cor do texto branco */
-    border: none; /* Remover borda padrão */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-}
-
-/* Efeito ao passar o mouse sobre o botão */
-#translate-btn:hover {
-    background-color: #f80303; /* Cor de fundo mais escura quando o cursor está sobre o botão */
-}
-
-/* Botão voltar */
-.botao-voltar {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.botao-voltar a {
-    background-color: #073ff7;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 40px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    top: 20px;
-    left: 10px;
-}
-
-.botao-voltar a:hover {
-    background-color: #f80303;
-}
-
-/* botão tema*/
-/* Light theme styles */
-body.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  /* Dark theme styles */
-  body.dark-theme {
-    background-color: #161616;
-    color: #f2f2f2;
-  }
-  #theme-toggle {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    background-color: transparent;
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    transition: color 0.3s;
-    margin: 20px;
-}
-
-/* Ajustes para telas pequenas */
-@media (max-width: 480px) {
-    .foto-perfil {
-        width: 100px; /* Reduz ainda mais o tamanho da imagem de perfil */
-        height: 110px;
+@media (max-width: 760px) {
+    .countainer {
+        padding: 0 16px;
     }
-    .text-justify {
-        margin: 10px; /* Ajusta o espaçamento em dispositivos menores */
-    }
-    footer {
-        padding: 30px 0; /* Menos padding para dispositivos muito pequenos */
-    }
-}
 
-/* Garante que os ícones fiquem lado a lado em todas as telas */
-@media (max-width: 768px) {
-    .icons-container {
-        overflow-x: auto;           /* Adiciona rolagem horizontal se necessário */
-        flex-wrap: nowrap;          /* Impede a quebra para a linha seguinte */
+    .curso-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-container {
+        width: 100%;
     }
 }
