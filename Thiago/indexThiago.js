@@ -45,7 +45,7 @@ const translations = {
       <br> <br>`,
 
   "section-projects-title": "Projects",
-  "section-projects-text": "Portfolio Website - JavaScript + HTML + CSS + DATABASE"
+  "section-projects-text": "Portfolio Website - JavaScript + HTML + CSS + DATABASE",
   "section-projects-text": "Valorant Pro Registry (VPR) - Java | MySQL | Swing | CRUD | Desktop Application",
   
   "section-courses-title": "Courses",
