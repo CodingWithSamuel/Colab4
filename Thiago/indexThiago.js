@@ -36,7 +36,7 @@ const translations = {
   "header-skills": "Knowledge in Python-JavaScript-HTML",
   "section-about-title": "About Me",
   "section-about-text": `Welcome! My name is Thiago Fachini, I am 20 years old and a member of the constantly learning tech community.
-      I am currently in the 5th semester of Computer Science, where I am gaining and deepening my knowledge in various areas of IT.
+      I am currently in the 6th semester of Computer Science, where I am gaining and deepening my knowledge in various areas of IT.
       <br><br>
       I have practical experience with Python, JavaScript, SQL, CSS and HTML, and am always looking for new opportunities to apply and expand these skills.
       My goal is to find a position in the tech field where I can contribute and collaborate for the continuous development of my skills and the IT. field.
